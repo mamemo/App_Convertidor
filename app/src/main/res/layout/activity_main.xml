@@ -6,13 +6,89 @@
     android:layout_height="match_parent"
     tools:context="tc1.mamendez.convertidordedivisas.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txt_Cantidad"
+            android:layout_alignStart="@+id/txt_Cantidad"
+            android:layout_marginBottom="37dp"
+            android:text="Cantidad:" />
+
+        <TextView
+            android:id="@+id/txt_Cantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_below="@+id/editText2"
+            android:layout_marginTop="88dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/radioCRCtoUSD"
+            android:layout_alignBottom="@+id/radioCRCtoUSD"
+            android:layout_alignStart="@+id/textView"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioCRCtoUSD"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:ems="10"
+            android:hint="Cantidad a convertir"
+            android:inputType="number" />
+
+        <RadioButton
+            android:id="@+id/radioCRCtoUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioUSDtoCRC"
+            android:layout_below="@+id/radioUSDtoCRC"
+            android:layout_marginTop="12dp"
+            android:text="CRC a USD"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioUSDtoCRC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="36dp"
+            android:text="USD a CRC"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="58dp"
+            android:layout_toEndOf="@+id/textView5"
+            android:onClick="convertirDinero"
+            android:text="Convertir" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/radioUSDtoCRC"
+            android:layout_marginStart="23dp"
+            android:layout_toEndOf="@+id/button"
+            android:text="1 dólar:" />
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
